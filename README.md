@@ -1,5 +1,9 @@
 # randomsaver
+
 A randomizing screensaver for Haiku
+
+This is not a port of the randomizing screensaver from the BeOS era with 
+the same name. It is a new program, unapologetically vibe-coded for a new era.
 
 RandomSaver draws nothing itself: every time it starts it picks one of the
 other installed screen savers at random and runs that one instead. Blackness
@@ -14,11 +18,14 @@ blacklists it, so RandomSaver will never pick it. With no saved
 configuration - that is, on the first run - every screen saver is enabled.
 
 The list is taken from the same four directories the ScreenSaver preferences
-app itself scans, so it shows exactly what that list shows.
+app itself scans, so it shows exactly what that list shows. There is no complex
+node monitoring - if you install a new screensaver while the Screensaver app is
+open, close and restart it to see it on the list.
 
 ## Building
 
-    mkdir build && cd build
+    mkdir build
+    cd build
     cmake ..
     make
 
